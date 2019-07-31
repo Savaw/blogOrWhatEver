@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 
-def index(request):
+def post_list(request):
+	return render(request, 'blog/post_list.html')
     
 # Create your views here.
