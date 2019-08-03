@@ -1,9 +1,19 @@
 <html>
-<head>
-	<title>A blog, they say</title>
-</head>
-<body>
-	<p>Hello worldddd!</p>
-	<p>Happy b-day mom! :> </p>
-</body>
+    <head>
+        <title>A blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">A Simple Blog</a></h1>
+        </div>
+
+        <div>
+            {% for post in posts %}
+                <p><b> {{ post.title }} </b></p>
+                <p> {{ post.text | linebreaksbr }} </p>
+                <p> {{ post.author }} - {{ post.published_date }}</p>
+                <br>
+            {% endfor %}
+        </div>
+    </body>
 </html>
