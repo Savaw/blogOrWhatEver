@@ -1,19 +1,14 @@
-<html>
-    <head>
-        <title>A blog full of hopes</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">A blog full of hopes</a></h1>
-        </div>
+{% extends 'blog/base.html' %}
 
-        <div>
-            {% for post in posts %}
-                <p><b> {{ post.title }} </b></p>
-                <p> {{ post.text | linebreaksbr }} </p>
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h2> <a hreh=""> {{ post.title }} </a></h2>
+            <p> {{ post.text | linebreaksbr }} </p>
+            <div class="post-footer">
                 <p> {{ post.author }} - {{ post.published_date }}</p>
-                <br>
-            {% endfor %}
+            </div>
+            <br>
         </div>
-    </body>
-</html>
+    {% endfor %}
+{% endblock %}

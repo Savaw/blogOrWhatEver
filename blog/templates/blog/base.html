@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+    <head>
+        <title>A blog full of hopes</title>
+         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Lacquer|Open+Sans+Condensed:300|Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}"> 
+
+    </head>
+    <body>
+        <div class="page-header">
+            <center> <h1><a href="/">A blog full of hopes</a></h1> </center>
+        </div>
+        
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
+
